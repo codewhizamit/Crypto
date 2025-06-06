@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRYPTO - Tech Assistant</title>
+    <link rel="shortcut icon" href="avatar.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <section class="main">
+        <div class="controls">
+            <button class="history-btn"><i class="fas fa-history"></i></button>
+            <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+            <button class="logout-btn"><i class="fas fa-sign-out-alt"></i></button>
+        </div>
+        <div class="history-sidebar">
+            <div class="history-header">
+                <h2>Conversation History</h2>
+                <button class="close-history"><i class="fas fa-times"></i></button>
+            </div>
+            <button class="new-chat">New Chat</button>
+            <div id="history"></div>
+        </div>
+        <div class="image-container">
+            <div class="image">
+                <img src="giphy.gif" alt="image">
+            </div>
+            <h1>C R Y P T O</h1>
+            <p id="greeting">I am Crypto, your tech-savvy Virtual Assistant. Let’s set up your profile!</p>
+            <div id="user-profile-form" class="user-profile-form">
+                <h3>Welcome! Let’s get to know you.</h3>
+                <label>Name:</label>
+                <input type="text" id="userName" placeholder="Your name" required>
+                <label>Favorite Tech Topic:</label>
+                <input type="text" id="favoriteTech" placeholder="e.g., AI, Cybersecurity" required>
+                <label>Preferred Language:</label>
+                <input type="text" id="language" placeholder="e.g., English" value="English" required>
+                <label>Tone Preference:</label>
+                <select id="tonePreference">
+                    <option value="casual">Casual</option>
+                    <option value="formal">Formal</option>
+                </select>
+                <button id="submitProfile">Submit</button>
+            </div>
+            <div id="reminder-notification" class="reminder-notification" style="display: none;">
+                <p id="reminder-text"></p>
+            </div>
+        </div>
+        <div class="input">
+            <button class="talk"><i class="fas fa-microphone-alt"></i></button>
+            <h1 class="content">Click here to speak</h1>
+        </div>
+        <div class="text-input">
+            <input type="text" id="textCommand" placeholder="Type your command here..." />
+            <button class="send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </section>
+    <script src="app.js"></script>
+    <script>
+        (function(){
+            function c(){
+                var b = a.contentDocument || a.contentWindow.document;
+                if (b) {
+                    var d = b.createElement('script');
+                    d.innerHTML = "window.__CF$cv$params={r:'93a8f7e838c3b043',t:'MTc0NjM3MTg4Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+                    b.getElementsByTagName('head')[0].appendChild(d);
+                }
+            }
+            if (document.body) {
+                var a = document.createElement('iframe');
+                a.height = 1;
+                a.width = 1;
+                a.style.position = 'absolute';
+                a.style.top = 0;
+                a.style.left = 0;
+                a.style.border = 'none';
+                a.style.visibility = 'hidden';
+                document.body.appendChild(a);
+                if ('loading' !== document.readyState) c();
+                else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c);
+                else {
+                    var e = document.onreadystatechange || function(){};
+                    document.onreadystatechange = function(b) {
+                        e(b);
+                        'loading' !== document.readyState && (document.onreadystatechange = e, c());
+                    };
+                }
+            }
+        })();
+    </script>
+</body>
+</html>
