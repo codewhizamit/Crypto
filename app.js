@@ -15,7 +15,7 @@ const logoutBtn = document.querySelector('.logout-btn');
 const closeHistoryBtn = document.querySelector('.close-history');
 
 // Use the provided Groq API key (WARNING: Do not expose in production)
-const GROQ_API_KEY = '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';
+const GROQ_API_KEY = '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';
 
 // Personalization variables
 let userProfile = JSON.parse(localStorage.getItem('userProfile')) || null;
@@ -473,4 +473,5 @@ function takeCommand(message) {
             saveConversation(message, response);
         });
     }
+
 }
